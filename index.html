@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>...</title>
+	<script>
+		function RandGoogleMap() {
+			var url = "https://www.google.fr/maps/@";
+			var lat = 90*Math.random()-45;
+			var lon = 180*Math.random()-90;
+			url = url + lat.toString() + ',' + lon.toString() + ',16z';
+			query = window.location.search;
+			window.location = url
+		}
+		
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const action = urlParams.get('action')
+		if (action == 'RandGoogleMap') {
+			RandGoogleMap()
+			}
+	</script>
+</head>
+</html>
